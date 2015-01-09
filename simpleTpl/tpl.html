@@ -1,0 +1,412 @@
+<!-- {{target: commonHead}} -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gb2312">
+    <title>网易游戏平台 - 首页</title>
+    <link rel="stylesheet" href="../css/ui-min.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/launcher.css" />
+</head>
+
+<body class="deck" page="main">
+<div class="bg-wrap beforeenter {{curGame}}" id="main-bg-wrap">
+
+    <section class="header">
+        <div class="header-logo jump-page" id="header-logo">
+            <a href="main.html" class="audio-btn" data-tip="点击游戏LOGO<br/>可返回游戏launcher界面"></a>
+        </div>
+
+        <a href="#" class="media-switch audio-btn" id="media-switch" data-tip="关闭声音与动画" data-statics="mediaSwitch:{data-status}"></a>
+        <a href="#" class="menu-switch audio-btn" id="menu-switch" data-tip="游戏平台菜单"></a>
+        <ul class="ngp-window">
+            <li class="min-icon" id="win-min-ico">-</li>
+            <li class="max-icon" id="win-max-ico">口</li>
+            <li class="close-icon" id="win-close-ico">X</li>
+        </ul>
+        <ul class="sys-menu" id="sys-menu">
+            <li class="preference"><a href="#" data-statics="showPreference">系统设置</a></li>
+            <li class="menu-sep"></li>
+            <li class="logout"><a href="#" data-statics="changeAccount">切换帐号</a></li>
+            <li class="exit"><a href="#" id="exit-ngp">退出</a></li>
+        </ul>
+
+        <header dragarea>
+<!-- {{/target}} -->
+<!-- {{target: commonBody0}} -->
+            <div class="user-info">
+                <div class="user-detail">
+                    <div class="id-info">
+                        <span id="user-id" class="user-id ngp-text"></span>
+                        <span class="user-status">在线</span>
+                    <span class="level-info">
+                        <b class="level-num">17</b>级
+                        <b class="level-title">大师</b>
+                    </span>
+                    </div>
+                    <div class="level-bar" id="level-bar">
+                        <div class="level-bar-inner"></div>
+                    </div>
+                </div>
+            </div>
+
+            <nav><ul>
+                <li class="selected jump-page audio-btn"><a href="main.html" alt="客户端">客户端</a></li>
+                <li><a href="#" class="uu-icon audio-btn" id="uu-icon" data-statics="launchUU" data-tip="网易自主研发的加速器" alt="UU加速器">UU加速器</a></li>
+                <li class="audio-btn disabled"><a href="#" data-tip="text:功能暂未开放，敬请期待;static:1;" alt="我的游戏">我的游戏</a></li>
+                <!--<li class="jump-page audio-btn"><a href="html/game.html" data-statics="gotoGame">我的游戏</a></li>-->
+                <!--<li class="audio-btn disabled"><a href="#" data-tip="text:功能暂未开放，敬请期待;static:1;">资源库</a></li>-->
+                <!--<li class="audio-btn disabled"><a href="#" data-tip="text:功能暂未开放，敬请期待;static:1;">工具箱</a></li>-->
+            </ul></nav>
+        </header>
+    </section>
+
+    <section class="main">
+        <aside class="game-bar left{{ hide|hideGameBar}}">
+<!-- {{if(showRevert)}}            <a href="#" class="audio-btn ngp-revert" id="ngp-revert">切回旧版</a>{{/if}} -->
+            <ul class="sort-list" id="sort-list">
+<!-- {{/target}} -->
+<!-- {{target: qnRecommendBar}} -->
+                <li class="sort-list-item" data-game="qn"  data-statics="recommendGame:qn">
+                    <div class="img"></div>
+                    <h4 alt="倩女幽魂2">倩女幽魂2</h4>
+                    <div class="update-progress"></div>
+                </li>
+<!-- {{/target}} -->
+<!-- {{target: jlRecommendBar}} -->
+                <li class="sort-list-item" data-game="jl"  data-statics="recommendGame:jl">
+                    <div class="img"></div>
+                    <h4 alt="西楚霸王">西楚霸王</h4>
+                    <div class="update-progress"></div>
+                </li>
+<!-- {{/target}} -->
+<!-- {{target: blRecommendBar}} -->
+                <li class="sort-list-item" data-game="bl"  data-statics="recommendGame:bl">
+                    <div class="img"></div>
+                    <h4 alt="爆裂天空">爆裂天空</h4>
+                    <div class="update-progress"></div>
+                </li>
+<!-- {{/target}} -->
+<!-- {{target: commonBody1}} -->
+            </ul>
+            <a href="http://qn2.netease.com/thread-887875-1-1.html" class="ngp-icon send-feedback qn audio-btn">意见反馈</a>
+            <a href="http://bw.netease.com/forum-46-1.html" class="ngp-icon send-feedback jl audio-btn">意见反馈</a>
+        </aside>
+
+        <div class="screen-box" id="screen-box">
+<!-- {{/target}} -->
+<!-- {{target: qnMainSection}} -->
+            <section class="screen" data-game="qn">
+                <video class="bg-video" src="../video/bg-qn.webm" loop="loop"></video>
+
+                <div class="remote-box" style="display: block;">
+                    <article class="game-intro">
+                        <h3>倩女幽魂2</h3>
+                        <p>网易第一玄幻网游《倩女幽魂2》，一键切换2.5D和3D视角，以超现实光影技术打造唯美三界，将上千万字原创剧情融入神话传说和历史事件之中，谱写一个个人鬼妖仙生与死，爱与恨，情与仇的动人故事。</p>
+                    </article>
+                    <div class="game-install">
+                        <a href="http://qn2.163.com/" class="ngp-btn3 audio-btn">游戏官网</a>
+                        <a href="http://qn2.163.com/download/" class="ngp-btn3 audio-btn download">下载游戏</a>
+                        <p class="ngp-text">已经安装了？
+                            <a href="#" class="locate-game-dir audio-btn">选择游戏安装目录</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="local-box">
+                    <div class="mute-video" id="qn-mute-video" data-statics="playCG:qn">
+                        <video loop class="bg-video mute"></video>
+                    </div>
+
+                    <div class="right-bar">
+                        <aside class="tool-bar narrow7 right">
+                            <ul>
+                                <li class="bulletin audio-btn"><a href="#" data-statics="showBulletin:qn"><b>公告</b></a></li>
+                                <li class="setting audio-btn"><a href="../qnhtml/setting.html" data-statics="setting:qn"><b>设置</b></a></li>
+                                <li class="register audio-btn"><a href="http://qn2.163.com/reg/" data-statics="register:qn"><b>注册</b></a></li>
+                                <li class="recharge audio-btn"><a href="http://pay.163.com/pcard/index.shtml" data-statics="recharge:qn"><b>充值</b></a></li>
+                                <li class="website audio-btn"><a href="http://qn2.163.com/index.html" data-statics="showWebsite:qn"><b>官网</b></a></li>
+                                <li class="forum audio-btn"><a href="http://qn2.netease.com/index.php" data-statics="showForum:qn"><b>论坛</b></a></li>
+                                <li class="service audio-btn"><a href="http://qn2.gm.163.com/" data-statics="service:qn"><b>客服</b></a></li>
+                            </ul>
+                        </aside>
+                    </div>
+
+                    <div class="center">
+                        <div class="launcher-wrap">
+                            <div class="pie-wrap main-progress"></div>
+
+                            <video src="../video/loop.webm" class="bg-video effect-video" data-hold="1" loop></video>
+                            <div class="game-launcher">
+                                <div class="start-game disabled">
+                                    <div class="center-wrap"><a href="#">
+                                        <em></em>
+                                        <h3 class="selected-server-name"></h3>
+                                    </a></div>
+                                </div>
+                                <div class="choose-server disabled" data-tip="text:选择服务器和大区;pos:top;">
+                                    <em>更换</em>
+                                    <a href="#" class="audio-btn" data-statics="chooseServer:qn"></a>
+                                </div>
+                            </div>
+
+                            <p class="ngp-text game-version">
+                                <span>版本：<em></em></span>
+                                <a href="http://qn2.163.com/download/patch.html" class="manual-update audio-btn" data-statics="manualUpdate:qn">手动更新</a>
+                                <a href="#" class="show-bulletin audio-btn" data-statics="showBulletin:qn">更新公告</a>
+                            </p>
+
+                            <a href="#" class="multi-account audio-btn" data-tip="text:打开帐号管理界面;pos:top;" data-statics="accountManage:qn">游戏帐号管理</a>
+                            <label class="enable-qr ngp-checkbox audio-btn" data-tip="text:启用二维码扫描登录;pos:top;">
+                                <input type="checkbox" data-statics="enableQRCode:qn|prop-checked=true" />
+                                <b>默认二维码登录</b>
+                            </label>
+                        </div>
+
+                        <div class="carousel-wrap qn">
+                            <ul class="carousel-box" data-url="http://file.mg.163.com/ngp/qnyh/api.php?action=info">
+                                <li class="box-narrow" data-params="info.hotlinks:slide"></li>
+                                <li class="box-wide text-list narrow" data-params="info.news:list"></li>
+                                <li class="empty" data-params="video:video" data-ref="#qn-mute-video"></li>
+                            </ul>
+                            <a href="http://qn2.gm.163.com/user_help.html?paper_id=667" data-statics="serviceTel:qn" class="ngp-icon game-contact"
+                               text="客服电话：020-83918151">客服电话：020-83918151</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+<!-- {{/target}} -->
+<!-- {{target: jlMainSection}} -->
+            <section class="screen" data-game="jl">
+                <div class="body-logo"></div>
+                <video class="bg-video" src="../video/bg-jl.webm" loop="loop"></video>
+
+                <div class="remote-box">
+                    <article class="game-intro">
+                        <h3>西楚霸王</h3>
+                        <p>网易首款2.8D玄幻战争网游。五龙争霸，仙人交战；楚汉争雄，六国并起。<br/>经历血与火的洗礼，享受战与杀的激情。与兄弟争夺天下，为美人献上江山！<br/>千古名将任你驱使，千军万马与子同袍。西楚霸王，为帝王们书写自己的传说……</p>
+                    </article>
+                    <div class="game-install">
+                        <a href="http://bw.163.com/" class="ngp-btn3 audio-btn">游戏官网</a>
+                        <a href="http://bw.163.com/index.html#download" class="ngp-btn3 audio-btn">游戏下载</a>
+                       <p class="ngp-text">已经安装了？
+                           <a href="#" class="locate-game-dir audio-btn">选择游戏安装目录</a>
+                       </p>
+                    </div>
+                </div>
+
+                <div class="local-box">
+                    <div class="mute-video" id="jl-mute-video" data-statics="playCG:jl">
+                        <video loop class="bg-video mute"></video>
+                    </div>
+
+                    <div class="right-bar">
+                        <aside class="tool-bar right jl">
+                            <div class="bg">
+                                <div class="lock"></div>
+                                <ul>
+                                    <li class="bulletin audio-btn"><a href="#" data-statics="showBulletin:jl"><b>公告</b></a></li>
+                                    <li class="setting audio-btn"><a href="../jlhtml/setting.html" data-statics="setting:jl"><b>设置</b></a></li>
+                                    <li class="register audio-btn"><a href="http://bw.163.com/fab/" data-statics="register:jl"><b>注册</b></a></li>
+                                    <!--<li class="recharge audio-btn"><a href="http://ecard.163.com/script/index/" data-statics="recharge:jl"><b>充值</b></a></li>-->
+                                    <li class="website audio-btn"><a href="http://bw.163.com/index.html" data-statics="showWebsite:jl"><b>官网</b></a></li>
+                                    <li class="forum audio-btn"><a href="http://bw.netease.com/" data-statics="showForum:jl"><b>论坛</b></a></li>
+                                </ul>
+                            </div>
+                        </aside>
+                    </div>
+
+                    <div class="center">
+                        <div class="launcher-wrap">
+                            <div class="pie-wrap main-progress"></div>
+                            <div class="pie-wrap optimize-progress disabled"></div>
+                            <div class="pie-wrap repair-progress disabled"></div>
+
+                            <video src="../video/loop.webm" class="bg-video effect-video" data-hold="1" loop></video>
+                            <div class="game-launcher">
+                                <div class="start-game disabled">
+                                    <div class="center-wrap"><a href="#">
+                                        <em></em>
+                                        <h3 class="selected-server-name"></h3>
+                                    </a></div>
+                                </div>
+                                <div class="choose-server disabled" data-tip="text:选择服务器和大区;pos:top;">
+                                    <em>更换</em>
+                                    <a href="#" class="audio-btn" data-statics="chooseServer:jl"></a>
+                                </div>
+                            </div>
+
+                            <p class="ngp-text game-version">
+                                <span>版本：<em></em></span>
+                                <a href="http://bw.163.com/index.html#download" class="manual-update audio-btn" data-statics="manualUpdate:jl">手动更新</a>
+                                <a href="#" class="show-bulletin audio-btn" data-statics="showBulletin:jl">更新公告</a>
+                            </p>
+
+                            <a href="#" class="multi-account audio-btn" data-tip="text:打开帐号管理界面;pos:top;" data-statics="accountManage:jl">游戏帐号管理</a>
+                        </div>
+
+                        <div class="carousel-wrap jl">
+                            <ul class="carousel-box" data-url="http://file.mg.163.com/ngp/xcbw/api.php?action=info">
+                                <li class="box-narrow" data-params="info.hotlinks:slide"></li>
+                                <li class="box-wide text-list narrow" data-params="info.news:list"></li>
+                                <li class="empty" data-params="video:video" data-ref="#jl-mute-video"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+<!-- {{/target}} -->
+<!-- {{target: blMainSection}} -->
+            <section class="screen" data-game="bl">
+                <div class="remote-box">
+                    <article class="game-intro">
+                        <h3>爆裂天空</h3>
+                        <p>《爆裂天空》由雷电工作室研发，为国内首款“横版飞行射击网游”，游戏引入了MV（Multi-Variant：多极变化）弹幕引擎和多极技能成长系统，令弹幕战斗千机变，搭配了全新的Techno电子音乐，惊艳视听享受，带来超爽快战斗体验。</p>
+                    </article>
+                    <div class="game-install">
+                        <a href="http://bl.163.com/" class="ngp-btn3 audio-btn">游戏官网</a>
+                        <a href="http://bl.163.com/download/" class="ngp-btn3 audio-btn">下载游戏</a>
+                        <p class="ngp-text">已经安装了？
+                            <a href="#" class="locate-game-dir audio-btn">选择游戏安装目录</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="local-box">
+                    <div class="right-bar">
+                        <aside class="tool-bar narrow right">
+                            <ul>
+                                <li class="bulletin audio-btn"><a href="#" data-statics="showBulletin:bl"><b>公告</b></a></li>
+                                <li class="register audio-btn"><a href="http://reg.163.com/reg/reg.jsp?product=leidian&url=http://bl.163.com/?activate=1&loginurl=http://bl.163.com/" data-statics="register:bl"><b>注册</b></a></li>
+                                <li class="website audio-btn"><a href="http://bl.163.com/" data-statics="showWebsite:bl"><b>官网</b></a></li>
+                                <li class="forum audio-btn"><a href="http://bl.netease.com/index.php" data-statics="showForum:bl"><b>论坛</b></a></li>
+                                <li class="recharge audio-btn"><a href="http://ecard.163.com/script/index" data-statics="recharge:bl"><b>充值</b></a></li>
+                                <li class="service audio-btn"><a href="http://bl.gm.163.com/" data-statics="service:bl"><b>客服</b></a></li>
+                            </ul>
+                        </aside>
+                    </div>
+
+                    <div class="center">
+                        <div class="launcher-wrap">
+                            <div class="pie-wrap main-progress"></div>
+
+                            <video src="../video/loop.webm" class="bg-video effect-video" data-hold="1" loop></video>
+                            <div class="game-launcher">
+                                <div class="start-game disabled">
+                                    <div class="center-wrap"><a href="#">
+                                        <em></em>
+                                        <h3 class="selected-server-name"></h3>
+                                    </a></div>
+                                </div>
+                                <div class="choose-server disabled" data-tip="text:选择服务器和大区;pos:top;">
+                                    <em>更换</em>
+                                    <a href="#" class="audio-btn" data-statics="chooseServer:bl"></a>
+                                </div>
+                            </div>
+
+                            <p class="ngp-text game-version">
+                                <span>版本：<em></em></span>
+                                <a href="http://bl.163.com/download/?patch" class="manual-update audio-btn" data-statics="manualUpdate:bl">手动更新</a>
+                                <a href="#" class="show-bulletin audio-btn" data-statics="showBulletin:bl">更新公告</a>
+                            </p>
+                        </div>
+
+                        <div class="carousel-wrap">
+                            <ul class="carousel-box bl" data-url="http://file.mg.163.com/ngp/bl/api.php?action=info">
+                                <li class="box-wide" data-params="pics:img"></li>
+                                <li class="box-narrow text-list" data-params="news:list"></li>
+                            </ul>
+                            <a href="http://bl.gm.163.com/" data-statics="service:bl" class="ngp-icon game-contact"
+                               text="客服电话：020-89166138">客服电话：020-89166138</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+<!-- {{/target}} -->
+<!-- {{target: commonBody2}} -->
+        </div>
+    </section>
+
+</div>
+
+<script src="../js/lib/jquery-2.1.0.min.js"></script>
+<script src="../js/ui-min.js"></script>
+<script src="../js/init.js"></script>
+<script src="../js/main.js"></script>
+<!-- {{/target}} -->
+<!-- {{target: qnScript}} -->
+<script>
+    // 创建桌面快捷方式
+    util.config.get('qn.makeLink') || $(window).on('setHomeSuccess.makeQNLink', function (evt, data) {
+        if (data.game === 'qn') {
+            qn.makeLink();
+            $(window).off('setHomeSuccess.makeQNLink');
+            util.config.set('qn.makeLink', (new Date()).getTime());
+            Model.alert('欢迎使用新版启动器，已为您生成桌面快捷方式。下次您可以点击“倩女幽魂2(游戏登录平台)”图标开启。');
+        }
+    });
+
+    // 显示调查问卷
+    window.onCloseWin = window.onCloseWin ? window.onCloseWin : [];
+    window.onCloseWin.push(function () {
+        if (!util.config.get('qn.showQuestionnaire')) {
+            util.config.set('qn.showQuestionnaire', (new Date()).getTime());
+            function showQuestionnaire() {
+                util.shellExecute('open', 'http://survey2.163.com/html/ngp_qn2/paper.html', null, null, null);
+                setTimeout(function () {
+                    $('#exit-ngp').trigger('click', { silent: 1 });
+                }, 1000);
+            }
+            Model.alert('感谢您的试用！请在稍后打开的调研问卷中留下您的意见', null, {
+                onok: showQuestionnaire,
+                onclose: showQuestionnaire
+            });
+            return false;
+        }
+    });
+</script>
+<!-- {{/target}} -->
+<!-- {{target: blScript}} -->
+<script>
+    var autoAccount = util.getAutoLoginAccount();
+    if (!(autoAccount && autoAccount.split(':')[1])) {
+        util.setSignInAccount('ANONYMOUS');     // 默认匿名登录
+        window.initArgs = { loginEscaped: 1 };
+    }
+
+    // 创建桌面快捷方式
+    util.config.get('bl.makeLink') || $(window).on('setHomeSuccess.makeBLLink', function (evt, data) {
+        if (data.game === 'bl') {
+            bl.makeLink();
+            $(window).off('setHomeSuccess.makeBLLink');
+            util.config.set('bl.makeLink', (new Date()).getTime());
+        }
+    });
+
+    // 显示调查问卷
+    window.onCloseWin = window.onCloseWin ? window.onCloseWin : [];
+    window.onCloseWin.push(function () {
+        if (!util.config.get('bl.showQuestionnaire')) {
+            util.config.set('bl.showQuestionnaire', (new Date()).getTime());
+            function showQuestionnaire() {
+                util.shellExecute('open', 'http://survey2.163.com/html/ngp_bl/paper.html', null, null, null);
+                setTimeout(function () {
+                    $('#exit-ngp').trigger('click', { silent: 1 });
+                }, 1000);
+            }
+            Model.alert('感谢您的试用！请在稍后打开的调研问卷中留下您的意见', null, {
+                onok: showQuestionnaire,
+                onclose: showQuestionnaire
+            });
+
+            return false;
+        }
+    });
+</script>
+<!-- {{/target}} -->
+<!-- {{target: commonFooter}} -->
+</body>
+</html>

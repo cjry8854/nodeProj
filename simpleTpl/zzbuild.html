@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gb2312">
+    <title>main.html build test</title>
+    <style>
+        body{text-align:center;}
+        h2{margin:10px 0 0;}
+        button{margin-left:30px;vertical-align:top;padding:3px 18px;}
+        textarea{width:1000px;height:300px;margin:0 auto;}
+    </style>
+</head>
+
+<body>
+    <h1>main.html build test</h1>
+    <h2>QN<button>下载</button></h2>
+    <textarea class="content" key="qn"></textarea>
+    <h2>JL<button>下载</button></h2>
+    <textarea class="content" key="jl"></textarea>
+    <h2>BL<button>下载</button></h2>
+    <textarea class="content" key="bl"></textarea>
+
+<script src="/ngp/ui/js/lib/jquery-2.1.0.min.js"></script>
+<script>
+    var tplUrl = 'http://localhost:8797/ngp/misc/yuicompressor/mainGen/tpl.html';
+
+    var tplHash = {};
+    $.get(tplUrl, function (tpl) {
+        $.each(tpl.split('<!-- {{/target}} -->'), function (index, item) {
+            if (item.replace(/\r\n/g, '')) {
+                item = item.replace(/<!-- \{\{target: (\w+?)\}\} -->(\r\n)?/, '');
+                tplHash[RegExp.$1] = item;
+            }
+        });
+
+        start();
+    });
+
+    function start() {
+        $('.content').each(function (index) {
+            var $this = $(this);
+
+            var key = $this.attr('key');
+            var path = key + 'html-main.tpl?v=2';
+            $.get(path, function (html) {
+                // get variables
+                var variables = {};
+                html = html.replace(/<!-- \{\{define: (\w+?)=(\w+?)\}\} -->(\r\n)?/g, function (match) {
+                    variables[RegExp.$1] = RegExp.$2;
+                    return '';
+                });
+
+                // module replacement
+                html = html.replace(/<!-- \{\{import: (\w+?)\}\} -->(\r\n)?/g, function (match) {
+                    var str = tplHash[RegExp.$1] || '';
+                    if (!str) {
+                        console.error('Tpl[ ' + RegExp.$1 + ' ] Not Found!');
+                    }
+                    return str;
+                });
+
+                // variables replacement
+                html = html.replace(/\{\{([\w\s]+?\|)?(\w+?)\}\}/g, function (match) {
+                    var val = variables[RegExp.$2];
+                    var conditionVal = RegExp.$1;
+                    if (conditionVal) {
+                        return (val == true) ? conditionVal.split('|')[0] : '';
+                    }
+                    return val || '';
+                });
+
+                $this.val(html);
+            });
+        });
+    }
+
+    $('button').click(function () {
+        var $text = $(this).parent().next();
+        $text.select();
+//        var w = window.open('about:blank');
+//        w.document.write($text.val());
+//        w.document.execCommand('Saveas', false, 'main.html');
+//        w.close();
+    });
+</script>
+
+</body>
+</html>
